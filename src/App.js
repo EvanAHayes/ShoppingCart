@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import React from 'react';
 import ProductLandingPage from './containers/ProductLandingPage';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
@@ -12,7 +11,9 @@ function App() {
        <BrowserRouter>
        <Navbar>
         <Switch>
-        <Route path="/" exact component={ProductLandingPage} />
+
+        <Route exact path="/" component={ProductLandingPage} />
+        
         </Switch>
        </Navbar>
        </BrowserRouter>
