@@ -17,14 +17,9 @@ class Products extends Component {
 
     render() {
         return (
-            <div>
-                 <main role="main" class="container">
-        <div class="mt-5 pt-5">
+            <div>     
            <ProductDescription product="productA" />
          </div>
-                 </main>
-
-            </div>
         )
     }
 }
