@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
-import Products from '../components/Products/Products'
+import ProductDescription from '../components/Products/ProductDescription/ProductDescription';
+//import Products from '../components/Products/Products'
 
 class ProductLandingPage extends Component {
     render() {
         return (
             <div>
-                <Products />
+                 <main role="main" class="container">
+        <div class="mt-5 pt-5">
+           <ProductDescription product="productA" />
+         </div>
+                 </main>
+
             </div>
         )
     }
