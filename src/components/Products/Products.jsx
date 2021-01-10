@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ProductDescription from './ProductDescription/ProductDescription';
+import ProductControls from './ProductsControls/ProductControls'
 
 // const Product_PRICES = {
 //     productA: 3.99,
@@ -18,7 +19,11 @@ class Products extends Component {
     render() {
         return (
             <div>     
-           <ProductDescription product="productA" />
+                 <img src={this.props.image} alt={this.props.title}/>
+                 <p>{this.props.description}</p>
+                 <p>{this.props.price}</p>
+                 <ProductControls subtract={this.props.subtract} add={this.props.add} />              
+              
          </div>
         )
     }

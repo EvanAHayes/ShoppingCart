@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ProductLandingPage from './containers/ProductLandingPage';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';

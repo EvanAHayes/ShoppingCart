@@ -16,8 +16,19 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
+
+  .tabbable {
+    position: relative;
+   }
+   
+   .valign {
+     position: absolute;
+     top: 0;
+     right: 0;
+     transform: translateY(50%);
+   }
   
   
-  .left{
+  #left{
       float: right;
   }
