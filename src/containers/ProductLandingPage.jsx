@@ -1,36 +1,50 @@
-import React, { Component } from 'react'
-//import ProductDescription from '../components/Products/ProductDescription/ProductDescription.jsx';
+import React, { Component} from 'react'
+import ProductAImage from '../images/product1.jpg'
+import ProductBImage from '../images/product2.jpg'
+import ProductCImage from '../images/product3.jpg'
 import Products from '../components/Products/Products'
 import classes from "./index2.css";
 import data from '../data.json';
+import Aux from '../hoc/aux.js';
+import SideMenu from '../components/UI/SideMenu/SideMenu'
+import CartItems from '../components/Cart/CartItems/CartItems'
 
 class ProductLandingPage extends Component {
     state = {
         productA: data.productA,
         productB: data.ProductB,
-        productC: data.ProductC
+        productC: data.ProductC,
+        cartItems: []
     }
-    render() {
-        const ProductAResults = this.state.productA.map(productA => {
-            return(
-                <Products key={productA.id}
-                          description={productA.description}
-                          image={productA.image}
-                          price={productA.price} />
 
-            )
-        })
+    addItemToCart = (product) => {
+        
+        const cartItems = this.state.cartItems.slice();
+        let alreadyInCart = false;
+        cartItems.forEach((item) => {
+            if(item.id === product.id){
+                item++
+                alreadyInCart = true;
+            }
+        });
+
+        if(!alreadyInCart){
+            cartItems.push({...product, count: 1})
+            console.log(cartItems);
+        }
+        this.setState({cartItems});
+    }
+
+    render() {
+
+        
+       
         return (
-            <div>
-           
+            <Aux>
             <nav>
             <div>
-            <div className={classes.tabbable}>
-            <div className={classes.valign}>
-                <button class="btn btn-primary btn-xs" type="submit">Test button</button>
-            </div>
-
-            <ul className="nav nav-tabs content--tabs" id="content--tabs" role="tablist">     
+            <div className={classes.tabbable}>      
+            <ul className="nav nav-tabs content--tabs" id="content--tabs" role="tablist">    
             <li><h4>React Store</h4></li>
                 
                 <li className="nav-item">
@@ -42,32 +56,44 @@ class ProductLandingPage extends Component {
                    </li>
                 <li className="nav-item">
             <a data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">ProductC</a>
-            </li>
-               <li className="float-right nav-item"><a href="/">View Cart</a></li>
+            </li>  
+              <li><SideMenu><CartItems/></SideMenu></li>    
             </ul>
-
-            </div>        
+            </div> 
+                  
         
         <div className="container">
          <div className="tab-content" id="myTabContent">
 
          <div className="tab-pane fade active show" id="tab-1" role="tabpanel" aria-labelledby="1-tab"> 
-                {ProductAResults}
+         <Products 
+         description={this.state.productA.description}
+         image={ProductAImage}
+         price={this.state.productA.price}
+         name={this.state.productA.title}
+         addToCart={() => this.addItemToCart(this.state.productA)} />
             </div>
 
             <div className="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab"> 
-                2
+            <Products 
+            description={this.state.productB.description}
+            image={ProductBImage}
+            price={this.state.productB.price} 
+            name={this.state.productB.title}  />
         </div>
 
         <div className="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
-            3
+        <Products 
+        description={this.state.productCdescription}
+        image={ProductCImage}
+        price={this.state.productC.price} 
+        name={this.state.productC.title} />
     </div>
          </div>
        </div>
      </div>
        </nav>
-       </div>
-        
+       </Aux>
         
         )
     }

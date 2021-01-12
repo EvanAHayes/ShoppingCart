@@ -1,3 +1,4 @@
+
 {
     "productA": 
         {
@@ -5,13 +6,14 @@
         "title": "Product A",
         "image": "/src/images/product1.jpg",
         "description": "productA",
-        "price": 3.99
+        "price": 3.99,
+        "value": 1
     },
     
     "ProductB" :{
         "id":"ProductB",
         "title": "Product A",
-        "image": "/src/images/product2.jpg",
+        "image": "/src/images/product1.jpg",
         "description": "",
         "price": 3.99
 

@@ -17,18 +17,26 @@ ul {
     text-decoration: none;
   }
 
-  .tabbable {
+  /* .tabbable {
     position: relative;
-   }
+   } */
    
-   .valign {
+   /* .valign {
      position: absolute;
      top: 0;
      right: 0;
      transform: translateY(50%);
-   }
+   } */
   
   
-  #left{
+  /* #left{
       float: right;
-  }
+  } */
+
+  img{
+    width: 500px;
+    height: 500px;
+}
+button .tabbable {
+    float: right;
+}
