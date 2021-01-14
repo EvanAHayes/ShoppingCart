@@ -10,7 +10,7 @@ export default function SideMenu(props) {
     
     return (
         <div>
-        <button onClick={() => setState({ isPaneOpen: true })}>
+        <button className="btn btn-link" style={{marginLeft:'580px', padding: 0}} onClick={() => setState({ isPaneOpen: true })}>
         View Cart
       </button>
 

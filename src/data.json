@@ -1,31 +1,28 @@
 
 {
-    "productA": 
-        {
-        "id":"ProductA",
-        "title": "Product A",
-        "image": "/src/images/product1.jpg",
-        "description": "productA",
-        "price": 3.99,
-        "value": 1
+    "productA": {
+        "id": 1,
+        "title": "Ketchup",
+        "image": "/product1.jpg",
+        "description": "This is a ketchup container. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "price": 3.99
     },
     
     "ProductB" :{
-        "id":"ProductB",
-        "title": "Product A",
-        "image": "/src/images/product1.jpg",
-        "description": "",
-        "price": 3.99
-
+        "id": 2,
+        "title": "Hot Sauce",
+        "image": "",
+        "description": "This is a hot sauce container. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "price": 4.99,
+        "count": 1
     },
-
+    
     "ProductC": {
-        
-            "id":"ProductC",
-            "title": "Product A",
-            "image": "/src/images/product3.jpg",
-            "description": "",
-            "price": 3.99
-         
+        "id": 3,
+        "title": "Massive Peanut Butter Sauce",
+        "image": "",
+        "description": "This is a massive peanut butter sauce container. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "price": 9.99,
+        "count": 1   
     }
 }
