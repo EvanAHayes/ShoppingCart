@@ -24,7 +24,7 @@ class Products extends Component {
                                   change={this.props.change} 
                                   value={this.props.value} />
                  <br/>
-                 <button onClick={this.props.addToCart}>Add To Cart</button>     
+                 <button className="btn btn-primary" onClick={this.props.addToCart}>Add To Cart</button>     
          </div>
         )
     }
